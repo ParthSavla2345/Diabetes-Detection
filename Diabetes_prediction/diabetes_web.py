@@ -5,16 +5,9 @@ import os
 import joblib
 import streamlit as st
 
-model_path = "trained_model.pkl"
 
-if os.path.exists(model_path):
-    model = joblib.load(model_path)
-    st.success("Model loaded successfully!")
-else:
-    st.error(f"File '{model_path}' not found!")
-
-
-loaded_model = pickle.load(open('trained_model.pkl', 'rb'))
+loaded_model = joblib.load("trained_model.pkl")
+#loaded_model = pickle.load(open('trained_model.pkl', 'rb'))
 
 
 def diabetes_prediction(input_data):
