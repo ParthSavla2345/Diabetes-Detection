@@ -1,6 +1,17 @@
 import numpy as np
 import pickle 
 import streamlit as st
+import os
+import joblib
+import streamlit as st
+
+model_path = "trained_model.pkl"
+
+if os.path.exists(model_path):
+    model = joblib.load(model_path)
+    st.success("Model loaded successfully!")
+else:
+    st.error(f"File '{model_path}' not found!")
 
 
 loaded_model = pickle.load(open('trained_model.pkl', 'rb'))
