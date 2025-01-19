@@ -5,6 +5,8 @@ import os
 import joblib
 import streamlit as st
 
+print(os.getcwd())  # This will show you where the app is looking for the file
+
 
 loaded_model = joblib.load("trained_model.pkl")
 #loaded_model = pickle.load(open('trained_model.pkl', 'rb'))
