@@ -19,11 +19,10 @@ Before running the project, ensure that you have the following libraries install
 - `pandas`
 - `sklearn`
 - `streamlit`
-- `pickle`
 
 You can install these dependencies using `pip`:
 ```
-pip install numpy pandas scikit-learn streamlit pickle-mixin
+pip install numpy pandas scikit-learn streamlit 
 ```
 
 ## Project Structure
@@ -32,8 +31,8 @@ Diabetes-Detection-System/
 │
 ├── diabetes.csv             # Dataset file
 ├── trained_model.pkl        # Saved trained SVM model
-├── diabetes_model.py        # Script for training the model
-├── app.py                   # Streamlit application
+├── Diabetes.ipynb           # Jupyter Notebook for training the model
+├── diabetes_web.py          # Streamlit application
 ├── requirements.txt         # List of required dependencies
 └── README.md                # This file
 ```
@@ -41,17 +40,15 @@ Diabetes-Detection-System/
 ## How to Run the Project
 
 1. **Train the Model**  
-   First, run the `diabetes_model.py` script to train the Support Vector Machine (SVM) model. The model is trained using the `diabetes.csv` dataset and then saved into a file named `trained_model.pkl` using pickle.
+   First, run the `Diabetes.ipynb` Jupyter notebook to train the Support Vector Machine (SVM) model. The model is trained using the `diabetes.csv` dataset and then saved into a file named `trained_model.pkl` using pickle.
 
-   ```bash
-   python diabetes_model.py
-   ```
+   You can open and run the notebook in a Jupyter environment (e.g., Jupyter Notebook, JupyterLab, or Google Colab).
 
 2. **Start the Web App**  
-   After training the model, you can run the Streamlit web application. This will allow you to input data and receive diabetes predictions.
+   After training the model and saving it as `trained_model.pkl`, you can run the Streamlit web application. This will allow you to input data and receive diabetes predictions.
 
    ```bash
-   streamlit run app.py
+   streamlit run diabetes_web.py
    ```
 
    The web application will start, and you can visit it in your browser at `http://localhost:8501`.
@@ -87,13 +84,7 @@ Diabetes-Detection-System/
 - **Output**:  
   "The person is diabetic"
 
-## Accuracy of the Model
-The model was trained and tested on the dataset, achieving high accuracy:
-- Training Accuracy: XX%
-- Testing Accuracy: XX%
-
 These results show that the model is capable of predicting diabetes with a reasonable level of accuracy.
 
 ## Conclusion
 This Diabetes Detection System provides a simple and effective way to predict whether an individual is at risk of diabetes. It uses machine learning techniques to make predictions based on various health indicators and provides an easy-to-use interface for users to input their data and receive immediate results.
-
