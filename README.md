@@ -1,4 +1,4 @@
-# Diabetes Detection System
+# Diabetes Detection System 
 Link : https://diabetes-detection-3ynjczd5ewdef9ghpqk8ad.streamlit.app/
 ## Overview
 The Diabetes Detection System is a machine learning-based web application that predicts whether a person is diabetic based on various health factors. The system leverages a Support Vector Machine (SVM) classifier trained on the popular diabetes dataset, and it allows users to input data such as glucose levels, insulin levels, and other factors to predict the likelihood of diabetes.
